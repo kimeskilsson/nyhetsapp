@@ -1,11 +1,11 @@
 import React from 'react';
 import Nyhetslista from './Nyhetslista';
 
-function Nyhetsartikel() {
+function Nyhetsartikel(props) {
   return(<article>
-    <img src="https://source.unsplash.com/random/400x250/?dog"></img>
-    <h2> Testnyhet</h2>
-    <p> beskrivning av testnyheten</p>
+    <img src={props.minArtikel.urlToImage}></img>
+    <h2> {props.minArtikel.title}</h2>
+    <p> {props.minArtikel.description}</p>
     <a> läs mer...</a>
     </article>);
 }
